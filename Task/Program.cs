@@ -65,6 +65,12 @@ Console.WriteLine("[{0}]", string.Join(", ", NewArray));
 
 
 int n = ReadNumber("Введите количество элементов в массиве");
+if(n > 50)
+{
+  Console.WriteLine("Слишком много элементов в изначальном массиве.");
+  return;
+}
+
 string[] arr = GetArray(n);
 GetNewArray(arr);
 
