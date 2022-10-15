@@ -38,7 +38,7 @@ void GetNewArray(string[] arr)
 int count = 0;
 for(int i = 0; i < arr.Length; i++)
 {
-  if(arr[i].Length < 4 )
+  if(arr[i].Length < 4 && 0 < arr[i].Length)
   {
     count++;
 
@@ -49,7 +49,7 @@ string[] NewArray = new string[count];
 int CountNew = 0;
 for(int i = 0; i < arr.Length; i++)
 {
- if(arr[i].Length < 4 )
+ if(arr[i].Length < 4 && 0 < arr[i].Length)
  {
    NewArray[CountNew] = arr[i];
    CountNew++;
