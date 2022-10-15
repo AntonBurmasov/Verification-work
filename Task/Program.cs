@@ -7,28 +7,63 @@ int ReadNumber(string message)
 
 
 
-string[] GetMatrix( int n)
+string[] GetArray( int n)
 {
 
 
-string[] matrix = new string[n];
+string[] array = new string[n];
 
 
  for(int i = 0; i < n; i++)
  {
   Console.WriteLine("Введите элемент массива");
   
-    matrix[i] = Console.ReadLine();
+    array[i] = Console.ReadLine() ?? "";
 
  }
 
  for(int i = 0; i < n; i++)
  {
-  Console.Write($"{matrix[i]}, ");
+  Console.Write($"{array[i]}, ");
 
  }
 
-  return matrix;
+  return array;
+}
+
+
+void GetNewArray(string[] arr)
+{
+int count = 0;
+for(int i = 0; i < arr.Length; i++)
+{
+  if(arr[i].Length < 4 )
+  {
+    count++;
+
+
+  }
+}
+string[] NewArray = new string[count];
+int CountNew = 0;
+for(int i = 0; i < arr.Length; i++)
+{
+ if(arr[i].Length < 4 )
+ {
+   NewArray[CountNew] = arr[i];
+   CountNew++;
+ }
+
+}
+
+Console.WriteLine();
+ for(int i = 0; i < NewArray.Length; i++)
+ {
+  Console.Write($"{NewArray[i]}, ");
+
+ }
+
+
 }
 
 
@@ -41,8 +76,8 @@ string[] matrix = new string[n];
 
 
 
-
 int n = ReadNumber("Введите количество элементов в массиве");
-string[] matr = GetMatrix(n);
+string[] arr = GetArray(n);
+GetNewArray(arr);
 
 
