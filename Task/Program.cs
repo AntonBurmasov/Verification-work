@@ -64,14 +64,6 @@ Console.WriteLine("[{0}]", string.Join(", ", NewArray));
 
 
 
-
-
-
-
-
-
-
-
 int n = ReadNumber("Введите количество элементов в массиве");
 string[] arr = GetArray(n);
 GetNewArray(arr);
