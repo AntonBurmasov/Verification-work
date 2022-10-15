@@ -38,7 +38,8 @@ void GetNewArray(string[] arr)
 int count = 0;
 for(int i = 0; i < arr.Length; i++)
 {
-  if(arr[i].Length < 4 && 0 < arr[i].Length)
+// Решил исключить null строки из итогового массива, хотя null значения и удовлетворяют условию задачи <=3.  
+  if(arr[i].Length < 4 && 0 < arr[i].Length)  
   {
     count++;
 
